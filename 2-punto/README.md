@@ -30,7 +30,7 @@ Ve a la capete .
 Luego compila con:
 
 ```bash
-meke -f makefile
+make -f makefile
 ```
 
 Ejecuta el intérprete:
@@ -215,9 +215,10 @@ Este proyecto puede extenderse fácilmente:
 ---
 
 ## 🧑‍💻 Autor
+Diego Casallas/Nicolas lesmes
 
 Desarrollado como proyecto educativo de análisis léxico y sintáctico con **Flex** y **Bison**,  
-para demostrar cómo crear lenguajes personalizados con un toque artesanal cervecero 🍺.
+para demostrar cómo crear lenguajes personalizados con un toque artesanal cervecero 🍺. Para la materia de lenguajes con el profesor Joaquin
 
 ---
 
