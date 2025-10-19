@@ -1,4 +1,4 @@
-# 🍺 CERVESQL — Un lenguaje cervecero basado en Flex y Bison
+# 🍺 CERVESQL — Un lenguaje cervecero implementado en Flex y Bison
 
 CERVESQL es un lenguaje inspirado en SQL, pero con terminología cervecera. 
 Está implementado usando **Flex** y **Bison**, y permite realizar operaciones típicas de bases de datos: insertar, consultar, actualizar y eliminar, usando comandos cerveceros como **FERMENTAR**, **SERVIR**, **MACERAR** y **DESECHAR**.
