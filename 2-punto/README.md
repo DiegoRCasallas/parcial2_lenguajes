@@ -1,6 +1,6 @@
 # 🍺 CERVESQL — Un lenguaje cervecero basado en Flex y Bison
 
-CERVESQL es un lenguaje inspirado en SQL, pero con terminología cervecera y expresiones en español.  
+CERVESQL es un lenguaje inspirado en SQL, pero con terminología cervecera. 
 Está implementado usando **Flex** y **Bison**, y permite realizar operaciones típicas de bases de datos: insertar, consultar, actualizar y eliminar, usando comandos cerveceros como **FERMENTAR**, **SERVIR**, **MACERAR** y **DESECHAR**.
 
 ---
@@ -23,17 +23,14 @@ sudo apt install flex bison gcc
 
 ## ⚙️ Compilación
 
-Clona o copia los archivos:
+Ve a la capete .
 
-- `parser.y`
-- `scanner.l`
+- `.\parcial2_lenguajes\2-punto`
 
 Luego compila con:
 
 ```bash
-bison -d parser.y      # genera parser.tab.c y parser.tab.h
-flex scanner.l         # genera lex.yy.c
-gcc -o cervesql parser.tab.c lex.yy.c -lfl
+meke -f makefile
 ```
 
 Ejecuta el intérprete:
