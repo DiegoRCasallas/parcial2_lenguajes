@@ -1,0 +1,26 @@
+programa -> ε (vacío)
+programa -> programa sentencia
+
+sentencia -> fermentar_stmt ';'
+sentencia -> servir_stmt ';'
+sentencia -> macerar_stmt ';'
+sentencia -> desechar_stmt ';'
+
+fermentar_stmt -> FERMENTAR EN IDENTIFICADOR LUPULO '(' lista_valores ')'
+
+servir_stmt -> SERVIR '*' DE IDENTIFICADOR
+
+macerar_stmt -> MACERAR IDENTIFICADOR MALTA IDENTIFICADOR EQ valor opt_barril
+
+desechar_stmt -> DESECHAR DE IDENTIFICADOR opt_barril
+
+opt_barril -> ε (vacío)
+opt_barril -> BARRIL condicion
+
+condicion -> IDENTIFICADOR EQ valor
+
+lista_valores -> valor
+lista_valores -> lista_valores ',' valor
+
+valor -> NUMERO
+valor -> CADENA
