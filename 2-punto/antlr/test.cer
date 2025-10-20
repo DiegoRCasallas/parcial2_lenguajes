@@ -1,0 +1,4 @@
+FERMENTAR EN cervezas LUPULO (1, "IPA", 6.5);
+SERVIR * DE cervezas;
+MACERAR cervezas MALTA grado = 7.0 BARRIL id = 1;
+DESECHAR DE cervezas BARRIL id = 3;

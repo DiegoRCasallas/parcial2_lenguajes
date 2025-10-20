@@ -1,4 +1,4 @@
-grammar CerveSQL;
+grammar cervesql;
 
 programa
     : (sentencia ';')* EOF

@@ -1,0 +1,58 @@
+# ================================
+# 🍺 CERVE-SQL: Git Ignore
+# Proyecto con ANTLR4 + Java
+# ================================
+
+# Archivos generados por ANTLR
+*.tokens
+*.interp
+*_Lexer.java
+*_Parser.java
+*_Listener.java
+*_BaseListener.java
+*_BaseVisitor.java
+*_Visitor.java
+
+# Archivos compilados de Java
+*.class
+
+# Archivos de salida o ejecutables
+*.jar
+*.log
+*.out
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo o temporales
+*~
+*.swp
+*.bak
+
+# Directorios comunes de IDEs
+# IntelliJ IDEA / JetBrains
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Archivos del build system
+/build/
+/bin/
+out/
+
+# Archivos del sistema operativo
+ehthumbs.db
+desktop.ini
+
+# Archivos generados por el Makefile
+lex.yy.c
+*.tab.c
+*.tab.h
