@@ -41,7 +41,7 @@ Ejemplo:
 ```
 id + id * id  →  ['id', '+', 'id', '*', 'id', '$']
 ```
-⃣###Definición de la Gramática
+### Definición de la Gramática
 La gramática se define como un diccionario G, donde cada producción tiene un índice numérico:
 
 ```
@@ -58,7 +58,7 @@ G = {
 }
 ```
 
-###Cálculo de Conjuntos primeros y siguientes
+### Cálculo de Conjuntos primeros y siguientes
 primero(G): obtiene los símbolos terminales que pueden aparecer al inicio de las producciones.
 
 siguiente(G, primero): obtiene los símbolos que pueden aparecer inmediatamente después de un no terminal.
@@ -84,39 +84,29 @@ T' = { +, ), $ }
 F  = { +, *, ), $ }
 ```
         
-###Construcción del Autómata LR(0)
+### Construcción del Autómata LR(0)
 Se generan los estados del autómata mediante los conjuntos de ítems LR(0):
 
-cerradura(items): calcula la cerradura de un conjunto de ítems.
+- cerradura(items): calcula la cerradura de un conjunto de ítems.
+- ir_a(items, símbolo): determina la transición al consumir un símbolo.
+- Estos estados y transiciones se usan para construir la tabla de análisis SLR(1).
 
-ir_a(items, símbolo): determina la transición al consumir un símbolo.
-
-Estos estados y transiciones se usan para construir la tabla de análisis SLR(1).
-
-###Creación de la Tabla SLR(1)
+### Creación de la Tabla SLR(1)
 Se crean dos estructuras principales:
 
-accion → define las operaciones shift, reduce, accept o error según el símbolo actual.
+- accion → define las operaciones shift, reduce, accept o error según el símbolo actual.
+- ir_a_tabla → define las transiciones para los símbolos no terminales.
+- La tabla combina información del autómata LR(0) y los conjuntos FOLLOW.
 
-ir_a_tabla → define las transiciones para los símbolos no terminales.
-
-La tabla combina información del autómata LR(0) y los conjuntos FOLLOW.
-
-###Clase AnalizadorSLR
+### Clase AnalizadorSLR
 Implementa el algoritmo de análisis sintáctico ascendente basado en pila.
 
-Funcionamiento general:
-
+### Funcionamiento general:
 Se inicia con la pila en estado 0 y la cadena de entrada con $.
-
 Se consulta la acción a realizar según el estado y el símbolo actual.
-
 Dependiendo del resultado:
 
-shift → se apila el símbolo y el nuevo estado.
-
-reduce → se desapilan símbolos y se aplica la producción correspondiente.
-
-accept → la cadena pertenece al lenguaje.
-
-error → la cadena no pertenece a la gramática.
+- shift → se apila el símbolo y el nuevo estado.
+- reduce → se desapilan símbolos y se aplica la producción correspondiente.
+- accept → la cadena pertenece al lenguaje.
+- error → la cadena no pertenece a la gramática.
