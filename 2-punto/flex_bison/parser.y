@@ -12,7 +12,6 @@ void yyerror(const char *s);
     char *sval;
 }
 
-/* Tokens */
 %token FERMENTAR EN LUPULO SERVIR DE BARRIL MACERAR MALTA DESECHAR
 %token <sval> IDENTIFICADOR NUMERO CADENA
 %token EQ
@@ -22,7 +21,7 @@ void yyerror(const char *s);
 %%
 
 programa:
-    /* vacío */
+
   | programa sentencia
   ;
 
@@ -50,7 +49,7 @@ desechar_stmt:
   ;
 
 opt_barril:
-    /* vacío */
+  
   | BARRIL condicion
   ;
 
