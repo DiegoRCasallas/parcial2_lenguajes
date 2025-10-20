@@ -1,6 +1,6 @@
 class AnalizadorDescendente:
     def __init__(self, gramatica):
-        self.gramatica = gramatica  # {'S': [['a', 'B'], ['b']], 'B': [['c']]}
+        self.gramatica = gramatica 
         self.first = {}
         self.follow = {}
         self.predict = {}
@@ -8,7 +8,7 @@ class AnalizadorDescendente:
         self.pos = 0
         
     def calcular_first(self):
-        """Calcula conjuntos FIRST para cada símbolo"""
+
         self.first = {nt: set() for nt in self.gramatica}
         
         cambio = True
@@ -36,7 +36,6 @@ class AnalizadorDescendente:
         return self.first
     
     def calcular_follow(self, inicio='S'):
-        """Calcula conjuntos FOLLOW para cada no terminal"""
         self.follow = {nt: set() for nt in self.gramatica}
         self.follow[inicio].add('$')
         
@@ -62,7 +61,6 @@ class AnalizadorDescendente:
         return self.follow
     
     def first_secuencia(self, secuencia):
-        """Calcula FIRST de una secuencia de símbolos"""
         if not secuencia:
             return {'ε'}
         
@@ -79,7 +77,6 @@ class AnalizadorDescendente:
         return resultado
     
     def calcular_predict(self):
-        """Calcula conjuntos de predicción para cada producción"""
         self.predict = {}
         for nt, producciones in self.gramatica.items():
             self.predict[nt] = {}
@@ -92,7 +89,6 @@ class AnalizadorDescendente:
         return self.predict
     
     def es_terminal(self, simbolo):
-        """Verifica si un símbolo es terminal"""
         return simbolo not in self.gramatica and simbolo != 'ε'
     
 
@@ -124,7 +120,7 @@ class AnalizadorDescendente:
     
 
 
-    
+
     
     def parsear(self, no_terminal):
         """Análisis descendente recursivo"""
@@ -171,7 +167,7 @@ class AnalizadorDescendente:
             return False
 
 
-# Ejemplo de uso
+
 if __name__ == "__main__":
     # Gramática: S → aB | b
     #            B → c | d
