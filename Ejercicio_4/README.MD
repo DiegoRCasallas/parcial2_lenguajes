@@ -1,4 +1,10 @@
 # Comparación de Algoritmos de Parsing: CYK vs Predictivo LL(1)
+
+# Comparación de Algoritmos de Parsing: CYK vs Predictivo LL(1)
+## ver en colab la ejecucion:
+
+https://colab.research.google.com/drive/1lTcz_hkpAX4ICw0XDnLe3l9v1YglzYJi?usp=sharing
+
 ## Descripción General
 
 La implementación del los algoritmos compara el rendimiento de análisis sintáctico (parsing) de los compiladores:
@@ -73,3 +79,16 @@ Genera gráficos comparativos utilizando matplotlib para:
 
 generar_tabla_comparativa(resultados):
 Muestra en consola una tabla con resultados detallados de tiempo, memoria y ratios de comparación.
+
+
+TABLA COMPARATIVA de resultados 
+
+
+Caso                CYK Tiempo(s)     Predictivo Tiempo(s)  Ratio     CYK Mem(MB)   
+--------------------------------------------------------------------------------
+simple              0.000039          0.000015              2.58      0.00          
+medio               0.000047          0.000011              4.38      0.01          
+complejo            0.000057          0.000016              3.60      0.01          
+muy_complejo        0.000170          0.000019              8.89      0.03          
+extremo             0.000935          0.000055              16.97     0.08   
+
