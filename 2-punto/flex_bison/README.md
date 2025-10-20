@@ -56,6 +56,14 @@ Ejemplos:
 
 A partir de ahí, puedes escribir comandos tipo SQL, pero con vocabulario cervecero.
 
+## existe una carpeta que llamada simulacion_db
+En esta carpeta se simula el comportamiento de una base de datos real, se usan POO para simular una tabla con columnas y filas. Y por ejemplo se puede consultar 
+la lista de cervezas en la tabla con la respectiva sintaxis de CERVESQL, pero hay funciones que fallan debido 
+a que la gramatica tiene problemas con el manejo numerico de los datos, entonces puede mostrar valores extraños en las insersiones(fermentacion) por ejemplo:
+
+**si se quiere probar se debe entrar a la carpeta simulacion_db y compilar el makefile como anterniormente se mencionnó**
+
+
 ---
 
 ## 🍺 Comandos disponibles
